@@ -1,0 +1,362 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: monospace;
+    scroll-behavior: smooth;
+}
+header{
+    background-color:rgb(240, 172, 183);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+
+.dropdownContainer{
+    position: absolute;
+    top: 29px;
+    right: -3px;
+    display: none;
+}
+
+.profileContainer {
+    position: absolute;
+    top: 28px;
+    right: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    display: inline-block; /* Make it an inline-block to contain both elements */
+}
+
+
+.profilePic {
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    right: 10px;
+    display: none;
+}
+
+.user{
+    position: absolute;
+    color: #fff;
+    top: 1px;
+    right: 60px;
+}
+
+hr {
+    margin: 0%;
+}
+
+ul{
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: letter-spacing 0.5s ease-in-out;
+}
+
+a:hover{
+    transition: all 1s;
+    color: hsl(0 0% 100% / 0.2);
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to left,white,blue,rgb(190, 21, 21));
+    animation:gradientwave 5s linear infinite;
+    -webkit-background-size: 500%;
+    background-size: 500%;
+    letter-spacing: 1px;
+    cursor: url('./cursor.png'), pointer;
+
+}
+
+@keyframes gradientwave {
+    0%{
+        background-position: 0% 100%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 100%;
+    }
+}
+
+footer{
+    height: 80px;
+    background-color: rgb(10, 10, 10);
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+}
+
+.Footer-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+.VidContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7px;
+    border-radius: 10px;
+    cursor: url('./cursor.png'), pointer;
+    max-width: 300px;
+    max-height: 270px;
+    height: 100%;
+    width: 100%;
+}
+
+.VidContainer video {
+    max-width: 300px;
+    max-height: 168px;
+}
+
+.VidContainer:hover{
+    background-color:pink;
+    cursor: url('./cursor.png'), pointer;
+}
+
+.Container{
+    display: grid;
+}
+
+
+
+
+.CommentSection {
+    position: fixed;
+    top: 0%; right: 0%;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 1);
+    height: 100%;
+    width: 40%;
+    display: none;
+}
+
+video{
+    max-width: 380px;
+    max-height: 350px;    
+    width: auto;
+    height: auto;     
+    margin: 20px 20px 5px 20px;
+}
+
+.VidOverlay {
+    position: fixed;
+    top: 0%; left: 0%;
+    z-index: 100;
+    background-color: pink;
+    height: 100%;
+    width: 60%;
+    cursor: url('./cursor.png'), pointer;
+    display: none;
+}
+
+.VidOverlay video{
+    position: absolute;
+    top: 50%;left: 47%;
+    transform: translate(-50%,-50%);
+    max-height: 100%;
+    max-width: 90%;
+    height: 500px;
+    width: auto;
+    padding: 0%;
+    border-radius: 5px;
+    object-fit: cover;
+    z-index: 100;
+    cursor: auto;
+}
+
+.UploadContainer {
+    position: fixed;
+    top: 0%; left: 0%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+
+.submitVideoUpload {
+    font-size: 20px; 
+    margin-left: 380px; 
+    margin-top: 50px; 
+    cursor: pointer;
+    transition: background-color 1 ease-in;
+    width: fit-content; height: fit-content;
+    padding: 20px;
+}
+
+.submitVideoUpload:hover{
+    background-color: rgb(163, 117, 117);
+}
+
+.uploadCard {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 600px;
+    background-color: #ea6060;
+    cursor: auto;
+}
+
+.contact{
+    background-color: rgb(50, 50, 50);
+    color:rgb(238, 186, 195);
+}
+
+.About{
+    background-color:rgb(96, 92, 93);
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+boldString{
+    font-size: 30px;
+    font-family: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 50px;
+}
+
+formattedString{
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.like{
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.share{
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sendComment:hover{
+    background-color: rgb(255, 254, 254);
+}
+
+.like:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.share:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.C1{
+    display: grid;
+}
+
+.C1header{
+    height: 200px;
+    width: 100%;
+    background-color: rgb(255, 174, 188);
+}
+
+.C1headerDisc{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px; margin-left: 20px;
+}
+
+.discriptionLower{
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 50;
+}
+
+.C1likesButtons{
+    height: 20px;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    justify-content: space-evenly;
+    transition: color 0.3 ease-in;
+}
+
+.C1comments{
+    height: 650px;
+    width: 100%;
+    background-color:rgb(230, 227, 227);
+    padding: 20px;
+    overflow: auto;
+}
+
+.comment{
+    background-color: rgb(253, 161, 161);
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px;
+    margin: 10px;
+}
+
+.C1footer{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(255, 173, 173);
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.popular{
+    display: flex;
+    overflow: initial;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+#newVideos {
+    display: flex;
+    overflow: initial;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+.UploadContainer{
+    display: none;
+}
+
+.dropdownEl:hover{
+    transition: all 1s ease-in;
+    background-color: rgb(80, 80, 80);
+    cursor: url('./cursor.png'), pointer;
+
+}
+
+.dropdownEl1:hover{
+    transition: all 1s ease-in;
+    background-color: rgb(80, 80, 80);
+    cursor: url('./cursor.png'), pointer;
+
+}
